@@ -1,0 +1,10 @@
+name: CustomTell
+version: 1.0.0
+api: 3.0.0
+main: supercrafter333\CustomTell\Loader
+author: supercrafter333
+
+permissions:
+  CustomTell.reply:
+    description: Command permission
+    default: true

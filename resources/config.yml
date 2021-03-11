@@ -1,0 +1,9 @@
+###########################
+########CustomTell#########
+###########################
+
+#languages: deu [German | Deutsch], eng [English]
+language: eng
+
+#dont't change this
+version: "1.0.0"

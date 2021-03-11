@@ -1,0 +1,16 @@
+#XXX Language - by @XXX
+
+#tell cmd
+tell.senderMessage: "§b[§e{sender} §7-> §a{target}§b] §8» §r{msg}"
+tell.targetMessage: "§b[§e{sender} §7-> §a{target}§b] §8» §r{msg}"
+tell.playerNotFound: "§cThis Player isn't online!"
+tell.sameTarget: "§cYou can't send a message to yourself."
+tell.usage: "§4Usage: §r/tell <player> <msg>"
+tell.desc: "Send a private message to a player"
+
+#reply cmd
+reply.message: "§b[§e{sender} §7-> §a{target}§b] §8» §r{msg}"
+reply.playerNotFound: "§cThis Player isn't online!"
+reply.empty: "You doesn't has send any player a message before!"
+reply.desc: "Reply to the last received message"
+reply.usage: "/r <message>"

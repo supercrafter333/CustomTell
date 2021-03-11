@@ -1,0 +1,18 @@
+#Deutsche Language - by @supercrafter333
+
+#tell cmd
+tell.senderMessage: "§b[§e{sender} §7-> §a{target}§b] §8» §r{msg}"
+tell.targetMessage: "§b[§e{sender} §7-> §a{target}§b] §8» §r{msg}"
+tell.playerNotFound: "§cDieser Spieler ist nicht Online!"
+tell.sameTarget: "§cDu kannst keine Privatnaricht an dich selbst schicken."
+tell.noPerm: "§cDu bist nicht berechtigt diesen Command auzuführen!"
+tell.usage: "§4Benutze: §r/tell <spieler> <naricht>"
+tell.desc: "Sende eine Private Naricht an einen Spieler!"
+
+#reply cmd
+reply.message: "§b[§e{sender} §7-> §a{target}§b] §8» §r{msg}"
+reply.playerNotFound: "§cDieser Spieler ist nicht Online!"
+reply.empty: "Dir wurde noch keine Privatnaricht geschrieben!"
+reply.noPerm: "§cDu bist nicht berechtigt diesen Command auzuführen!"
+reply.desc: "Antworte auf deine zuletzt empfangene Privatnaricht!"
+reply.usage: "/r <naricht>"
