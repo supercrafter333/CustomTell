@@ -1,4 +1,4 @@
-# CustomTell   [![](https://poggit.pmmp.io/shield.state/CustomTell)](https://poggit.pmmp.io/p/CustomTell) <a href="https://poggit.pmmp.io/p/CustomTell"><img src="https://poggit.pmmp.io/shield.dl.total/CustomTell"></a>
+# CustomTell   [![](https://poggit.pmmp.io/shield.state/CustomTellx)](https://poggit.pmmp.io/p/CustomTellx) <a href="https://poggit.pmmp.io/p/CustomTellx"><img src="https://poggit.pmmp.io/shield.dl.total/CustomTellx"></a>
 
 With this plugin you can cusomize the `/tell` command! The `/reply` command is implemented too and you can customize the `/reply` command too!
 
