@@ -58,11 +58,11 @@ class Loader extends PluginBase
     }
 
     /**
-     * @return mixed
+     * @return Config
      */
-    public function getBaseConfig()
+    public function getBaseConfig(): Config
     {
-        return $this->baseConfig;
+        return new Config($this->getDataFolder() . "config.yml", Config::YAML);
     }
 
     /**
