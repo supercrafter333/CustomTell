@@ -58,9 +58,9 @@ class Loader extends PluginBase
     }
 
     /**
-     * @return Config
+     * @return mixed
      */
-    public function getBaseConfig(): Config
+    public function getBaseConfig()
     {
         return $this->baseConfig;
     }
