@@ -1,4 +1,4 @@
-# CustomTell   [![](https://poggit.pmmp.io/shield.state/CustomTellx)](https://poggit.pmmp.io/p/CustomTellx) <a href="https://poggit.pmmp.io/p/CustomTellx"><img src="https://poggit.pmmp.io/shield.dl.total/CustomTellx"></a>
+# CustomTell
 
 With this plugin you can cusomize the `/tell` command! The `/reply` command is implemented too and you can customize the `/reply` command too!
 
@@ -20,7 +20,7 @@ This plugin is Licensed under the [Apache 2.0 License](/LICENSE)! Plugin by supe
 |------------[please post a bug if you found a bug]--------------|
 
 ### Downloads:
-Poggit: <a href="https://poggit.pmmp.io/p/CustomTell">Download</a> [soon]
+Poggit: <a href="https://poggit.pmmp.io/ci/supercrafter333/CustomTell/CustomTell">Download</a>
 
 ### Credits
 Owner: supercrafter333
