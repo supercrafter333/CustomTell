@@ -14,7 +14,7 @@ I hope that this plugin is usefull :)
 This plugin is Licensed under the [Apache 2.0 License](/LICENSE)! Plugin by supercrafter333!
 
 ### TODOs
-- [ ] Show tell messages in console
+- [ ] Show tell messages in console [WIP]
 
 ### Bugs
 |------------[please post a bug if you found a bug]--------------|

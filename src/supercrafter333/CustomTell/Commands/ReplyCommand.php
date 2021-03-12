@@ -63,6 +63,11 @@ class ReplyCommand extends Command
         $Y = Loader::getInstance()->translateString("tell.targetMessage");
         $Y = str_replace(["{sender}"], [$name], str_replace(["{target}"], [$target->getName()], str_replace(["{msg}"], [implode(" ", $args)], $Y)));
         $target->sendMessage($Y);
+        if (Loader::getInstance()->useConsole() == true) {
+            $Z = Loader::getInstance()->translateString("log.Message");
+            $Z = str_replace(["{sender}"], [$name], str_replace(["{target}"], [$target->getName()], str_replace(["{msg}"], [implode(" ", $args)], $Y)));
+            Loader::getInstance()->getLogger()->info($Z);
+        }
         Loader::getInstance()->setLastSend($s->getName(), $target->getName());
         return true;
     }

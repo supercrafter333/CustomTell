@@ -34,7 +34,13 @@ class Loader extends PluginBase
     {
         self::$instance = $this;
         $this->saveResource("config.yml");
+        if ($this->isVersion("1.1.0") == false) {
+            $this->updateBaseConfig();
+        }
         $this->loadLanguages();
+        if ($this->isLangVersions("1.1.0") == false) {
+            $this->updateLanguageFiles();
+        }
         $cmdMap = $this->getServer()->getCommandMap();
         $PMMPTellCmd = $cmdMap->getCommand("tell");
         $cmdMap->unregister($PMMPTellCmd);
@@ -111,5 +117,79 @@ class Loader extends PluginBase
         @mkdir($this->getDataFolder() . "lang/");
         $this->saveResource("lang/eng.yml");
         $this->saveResource("lang/deu.yml");
+    }
+
+    /**
+     * @return bool
+     */
+    public function useConsole(): bool
+    {
+        if ($this->getBaseConfig()->get("use.ConsoleLog") == "true" || $this->getBaseConfig()->get("use.ConsoleLog") == "on") {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     *
+     */
+    public function updateBaseConfig()
+    {
+        unlink($this->getDataFolder() . "config.yml");
+        $this->saveResource("config.yml");
+        $this->getLogger()->warning("config.yml was updated!");
+    }
+
+    /**
+     * @return string
+     */
+    public function checkVersion(): string
+    {
+        return $this->getBaseConfig()->get("version");
+    }
+
+    /**
+     * @param string $version
+     * @return bool
+     */
+    public function isVersion(string $version): bool
+    {
+        if ($this->checkVersion() == $version) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     *
+     */
+    public function updateLanguageFiles()
+    {
+        unlink($this->getDataFolder() . "lang/TEMPLATE.yml");
+        unlink($this->getDataFolder() . "lang/deu.yml");
+        unlink($this->getDataFolder() . "lang/eng.yml");
+        $this->loadLanguages();
+        $this->getLogger()->warning("Language files was updated for new version!");
+    }
+
+    /**
+     * @param string $version
+     * @return bool
+     */
+    public function isLangVersions(string $version): bool
+    {
+        $baseCfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+        $language = $baseCfg->get("language");
+        if ($language === "deu" || $language === "eng") {
+            $useLang = new Config($this->getDataFolder() . "lang/" . $language . ".yml", Config::YAML);
+            if ($useLang->exists("version")) {
+                if ($this->translateString("version") == $version) {
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+        return false;
     }
 }

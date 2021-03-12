@@ -16,3 +16,9 @@ reply.empty: "Dir wurde noch keine Privatnaricht geschrieben!"
 reply.noPerm: "§cDu bist nicht berechtigt diesen Command auzuführen!"
 reply.desc: "Antworte auf deine zuletzt empfangene Privatnaricht!"
 reply.usage: "/r <naricht>"
+
+#console messages
+log.Message: "[{sender} -> {target}] » {msg}"
+
+#don't change this
+version: "1.1.0"

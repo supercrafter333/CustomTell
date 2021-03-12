@@ -5,5 +5,8 @@
 #languages: deu [German | Deutsch], eng [English]
 language: eng
 
+#do you will log the messages in console? [true|false]
+use.ConsoleLog: "true"
+
 #dont't change this
-version: "1.0.0"
+version: "1.1.0"
