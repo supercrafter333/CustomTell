@@ -165,7 +165,6 @@ class Loader extends PluginBase
      */
     public function updateLanguageFiles()
     {
-        unlink($this->getDataFolder() . "lang/TEMPLATE.yml");
         unlink($this->getDataFolder() . "lang/deu.yml");
         unlink($this->getDataFolder() . "lang/eng.yml");
         $this->loadLanguages();
