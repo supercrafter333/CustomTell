@@ -4,7 +4,7 @@ namespace supercrafter333\CustomTell\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use supercrafter333\CustomTell\Loader;
 
 /**
@@ -50,7 +50,7 @@ class ReplyCommand extends Command
             $s->sendMessage($string);
             return true;
         }
-        $target = $s->getServer()->getPlayer(Loader::getInstance()->getLastSend($s->getName()));
+        $target = $s->getServer()->getPlayerExact(Loader::getInstance()->getLastSend($s->getName()));
         if (!$target instanceof CommandSender) {
             $string = Loader::getInstance()->translateString("reply.playerNotFound");
             $s->sendMessage($string);

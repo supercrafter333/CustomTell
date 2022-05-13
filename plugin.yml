@@ -1,6 +1,6 @@
 name: CustomTell
-version: 1.1.0-dev
-api: 3.0.0
+version: 1.1.0
+api: 4.0.0
 main: supercrafter333\CustomTell\Loader
 author: supercrafter333
 

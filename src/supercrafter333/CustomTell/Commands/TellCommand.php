@@ -4,7 +4,7 @@ namespace supercrafter333\CustomTell\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use supercrafter333\CustomTell\Loader;
 
 /**
@@ -45,7 +45,7 @@ class TellCommand extends Command
             $s->sendMessage($string);
             return true;
         }
-        $target = $s->getServer()->getPlayer(array_shift($args));
+        $target = $s->getServer()->getPlayerByPrefix(array_shift($args));
         if ($target === $s) {
             $string = Loader::getInstance()->translateString("tell.sameTarget");
             $s->sendMessage($string);

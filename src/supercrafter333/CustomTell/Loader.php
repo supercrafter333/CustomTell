@@ -2,8 +2,10 @@
 
 namespace supercrafter333\CustomTell;
 
+use pocketmine\command\Command;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\utils\SingletonTrait;
 use supercrafter333\CustomTell\Commands\ReplyCommand;
 
 /**
@@ -12,25 +14,20 @@ use supercrafter333\CustomTell\Commands\ReplyCommand;
  */
 class Loader extends PluginBase
 {
+    use SingletonTrait;
 
-    /**
-     * @var
-     */
-    protected $lastSend;
-    /**
-     * @var
-     */
-    protected $baseConfig;
 
-    /**
-     * @var
-     */
-    protected static $instance;
+    protected array $lastSend;
 
-    /**
-     *
-     */
-    public function onEnable()
+    protected Config $baseConfig;
+
+
+    protected function onLoad(): void
+    {
+        self::setInstance($this);
+    }
+
+    protected function onEnable(): void
     {
         self::$instance = $this;
         $this->saveResource("config.yml");
@@ -43,18 +40,10 @@ class Loader extends PluginBase
         }
         $cmdMap = $this->getServer()->getCommandMap();
         $PMMPTellCmd = $cmdMap->getCommand("tell");
-        $cmdMap->unregister($PMMPTellCmd);
+        if ($PMMPTellCmd instanceof Command) $cmdMap->unregister($PMMPTellCmd);
         $cmdMap->register("CustomTell", new \supercrafter333\CustomTell\Commands\TellCommand("tell"));
         $cmdMap->register("CustomTell", new ReplyCommand("reply"));
         $this->baseConfig = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-    }
-
-    /**
-     * @return static
-     */
-    public static function getInstance(): self
-    {
-        return self::$instance;
     }
 
     /**

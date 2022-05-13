@@ -9,12 +9,13 @@ I hope that this plugin is usefull :)
 - `/r` the r/reply command is implemented too
 - Easy to use (do it on your server, and start)
 - Very customizable (You can change a lot of messages in the *lang* folder at the language datas (f.e. `eng.yml`))
+- Messages can be shown in console
 
 ### License
 This plugin is Licensed under the [Apache 2.0 License](/LICENSE)! Plugin by supercrafter333!
 
 ### TODOs
-- [ ] Show tell messages in console [WIP]
+- [X] Show tell messages in console
 
 ### Bugs
 |------------[please post a bug if you found a bug]--------------|
